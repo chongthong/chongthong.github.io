@@ -1,0 +1,727 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main Container */
+.main-container {
+  width: 1100px;
+  height: 1100px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #1a2a3a, #2c3e50);
+  color: white;
+  padding: 20px 30px;
+  border-bottom: 3px solid #ff5722;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: #ff5722;
+  filter: drop-shadow(0 0 5px rgba(255, 87, 34, 0.7));
+}
+
+.logo-container h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.logo-subtitle {
+  font-size: 1rem;
+  color: #bdc3c7;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+/* Content Layout */
+.content-wrapper {
+  display: flex;
+  min-height: 700px;
+}
+
+/* Side Panels */
+.side-panel {
+  width: 280px;
+  padding: 25px;
+  background: #f8f9fa;
+}
+
+.left-panel {
+  border-right: 1px solid #eaeaea;
+}
+
+.right-panel {
+  border-left: 1px solid #eaeaea;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  background: linear-gradient(90deg, #ff5722, #e64a19);
+  color: white;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header h3 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.card-body {
+  padding: 25px 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Instruction Text */
+.instruction-text {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.target-text {
+  background: #ff8800d8;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+   gap: 5px;
+  border-left: 4px solid #000000;
+}
+
+.target-text i {
+  color: #d40000;
+  font-size: rem;
+}
+
+/* Formula Section */
+.formula-section {
+  margin-bottom: 30px;
+}
+
+.formula-section h4 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formula-display {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formula-item {
+  background: #f5f7fa;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #ff5722;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formula {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.formula-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Circuit Status */
+.circuit-status {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 25px;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.status-header i {
+  color: #ff5722;
+}
+
+.status-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.status-name {
+  font-weight: 600;
+  color: #444;
+}
+
+.status-indicator {
+  font-size: 0.85rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.status-indicator.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-indicator:not(.active) {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+/* Result Display */
+.result-display {
+  background: linear-gradient(135deg, #fff3e0, #ffecb3);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ffb74d;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #e65100;
+}
+
+.result-header i {
+  font-size: 1.3rem;
+}
+
+.result-header h4 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+}
+
+.result-value {
+  text-align: center;
+}
+
+.result-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.value-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+}
+
+.value-container span:first-child {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e65100;
+}
+
+.unit {
+  font-size: 1.2rem;
+  color: #ff9800;
+  font-weight: 500;
+}
+
+/* Center Panel */
+.center-panel {
+  flex: 1;
+  padding: 25px;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.circuit-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 25px;
+}
+
+.circuit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.circuit-header h3 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circuit-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffebee;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #ffcdd2;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background: #f44336;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 0.9rem;
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Circuit Board */
+.circuit-board {
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circuit-svg {
+  width: 100%;
+  height: 300px;
+}
+
+@keyframes flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.svg-label {
+  font-size: 13px;
+  font-weight: bold;
+  fill: #000000;
+  font-family: "Orbitron", sans-serif;
+}
+
+.svg-label.hidden {
+  display: none;
+}
+
+/* Drop Zones */
+.drop-zone {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #bbb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.drop-zone.horiz {
+  width: 90px;
+  height: 80px;
+  top: 60px;
+  left: 325px;
+}
+
+.drop-zone.vert {
+  width: 80px;
+  height: 90px;
+  top: 150px;
+  left: 400px;
+}
+
+.drop-zone:hover {
+  border-color: #ffffff;
+  background: rgba(255, 235, 238, 0.8);
+  transform: scale(1.05);
+}
+
+.drop-zone.filled {
+  border: 1px solid #ffffff00;
+  background: rgba(232, 245, 233, 0.295);
+}
+
+.slot-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.slot-label i {
+  font-size: 1.5rem;
+  color: #bbb;
+}
+
+.drop-zone.filled .slot-label {
+  display: none;
+}
+
+/* Circuit Controls */
+.circuit-controls {
+  margin-top: 10px;
+}
+
+.control-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.control-card h4 {
+  margin-bottom: 25px;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.input-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.input-header i {
+  color: #ff5722;
+  font-size: 1rem;
+}
+
+.input-header label {
+  font-weight: 600;
+  color: #444;
+  font-size: 1rem;
+   margin-bottom: 1px;
+}
+
+.input-with-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+/* Hapus tombol panah pada input number */
+.input-with-controls input {
+  width: 200px;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+  color: #2c3e50;
+  transition: border-color 0.3s;
+  -moz-appearance: textfield;
+}
+
+/* Hapus tombol panah untuk Chrome, Safari, Edge, Opera */
+.input-with-controls input::-webkit-outer-spin-button,
+.input-with-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hapus tombol panah untuk Firefox */
+.input-with-controls input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-with-controls input:focus {
+  outline: none;
+  border-color: #ff5722;
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2);
+}
+
+
+
+/* Simulate Button */
+.simulate-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(90deg, #ff5722, #e64a19);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+  margin-bottom: 25px;
+}
+
+.simulate-btn:hover {
+  background: linear-gradient(90deg, #e64a19, #d84315);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+}
+
+.simulate-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Efek tombol saat diklik */
+.simulate-btn.clicked {
+  transform: scale(0.98);
+  box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+}
+
+/* Component Shelf */
+.component-instruction {
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.component-shelf {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.component-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s;
+}
+
+.component-item:hover {
+  background: white;
+  border-color: #ff5722;
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.component-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comp-name {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.comp-desc {
+  font-size: 0.85rem;
+  color: #777;
+  font-style: italic;
+}
+
+.draggable {
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+}
+
+.component-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .side-panel {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left-panel,
+  .right-panel {
+    border: none;
+  }
+
+  .left-panel {
+    margin-bottom: 20px;
+  }
+
+  .right-panel {
+    margin-top: 20px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .circuit-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .main-container {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .input-with-controls input {
+    width: 100%;
+  }
+
+  .drop-zone.horiz,
+  .drop-zone.vert {
+    transform: scale(0.8);
+  }
+}
