@@ -170,7 +170,7 @@ function updateLEDColor(I_mA) {
 }
 
 function resetDisplay() {
-  pDisplay.textContent = '0.00';
+  iDisplay.textContent = '0.00';
   const activeLED = document.querySelector('#slot-led .led-bulb');
   if (activeLED) {
     activeLED.setAttribute('fill', '#FFFFFF');
