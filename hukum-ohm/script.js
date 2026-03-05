@@ -145,7 +145,7 @@ function calculateAndDisplay() {
   if (isNaN(V) || isNaN(R) || R <= 0) return;
 
    // Arus tetap dihitung untuk visual LED (I = V / R)
-  const I_mA = (V / R) * 1000;
+  const I_mA = (V / R) * 100;
   updateLEDColor(I_mA);
 }
 
