@@ -144,11 +144,7 @@ function calculateAndDisplay() {
   const R = parseFloat(rInput.value);
   if (isNaN(V) || isNaN(R) || R <= 0) return;
 
-  // HITUNG DAYA (P = V^2 / R)
-  const P_Watt = (V * V) / R;
-  pDisplay.textContent = P_Watt.toFixed(2);
-
-  // Arus tetap dihitung untuk visual LED (I = V / R)
+   // Arus tetap dihitung untuk visual LED (I = V / R)
   const I_mA = (V / R) * 1000;
   updateLEDColor(I_mA);
 }
@@ -159,7 +155,7 @@ function updateLEDColor(I_mA) {
   if (!activeLED) return;
 
   let color = "#ffffff";
-  if (I_mA > 0 && I_mA < 50) color = "#fffc5f";
+  if (I_mA < 50) color = "#fffc5f";
   else if (I_mA >= 50 && I_mA < 150) color = "#fc9653";
   else if (I_mA >= 150 && I_mA <= 200) color = "#ff3c01";
   else if (I_mA > 200) {
