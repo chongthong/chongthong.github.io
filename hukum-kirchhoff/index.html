@@ -581,6 +581,78 @@
         </div>
       </div>
     </div>
+<div class="tutorial-container">
+      <div class="tutorial-header">
+        <h2><i class="fas fa-book-open"></i> Panduan Eksperimen: Hukum Kirchhoff</h2>
+           </div>
+
+      <div class="tutorial-grid">
+        <div class="tutorial-card online-card">
+          <div class="tutorial-card-header">
+            <h3><i class="fas fa-laptop-code"></i> Eksperimen Online</h3>
+          </div>
+          <div class="tutorial-card-body">
+            <p class="tutorial-objective"><strong>Tujuan Percobaan:</strong> Pratikan dapat membuktikan Hukum Kirchhoff I dan II secara empiris dengan merangkai komponen fisik dua loop, serta menganalisis interaksi arus antar sumber tegangan menggunakan alat ukur.</p>
+            
+            <h4>Tahap 1: Merakit Rangkaian (Persiapan)</h4>
+            <ul>
+              <li>Saat pertama kali membuka simulator, Anda akan melihat sirkuit terputus dan status indikator di atas sirkuit berwarna merah bertuliskan "Sirkuit Tidak Lengkap".</li>
+              <li>Perhatikan panel "Komponen Elektronika" di sebelah kanan.</li>
+              <li>Klik dan seret (drag) komponen yang diperlukan, lalu lepaskan (drop) tepat di area yang kosong di jalur atas sirkuit.</li>
+              <li>Jika peletakan komponen benar, lampu indikator sirkuit akan berubah menjadi hijau dan bertuliskan "Sirkuit Siap!".</li>
+            </ul>
+
+            <h4>Tahap 2: Mengatur Variabel (Eksperimen Utama)</h4>
+            <p>Rangkaian ini menggunakan metode Mesh Analysis (Analisis Loop) untuk mencari arus yang mengalir di cabang tengah (I3). Mari kita masukkan variabelnya!</p>
+            <ul>
+              <li>Beralih ke panel "Kontrol Variabel" di bagian bawah.</li>
+              <li>Masukkan nilai untuk masing-masing sumber tegangan dan hambatan.</li>
+              <li>Klik tombol biru bertuliskan "SIMULATE".</li>
+            </ul>
+
+            <h4>Tahap 3: Analisis Hasil & Observasi</h4>
+            <ul>
+              <li>Perhatikan panel "Hasil Perhitungan" di sebelah kiri.</li>
+              <li>Anda akan melihat nilai Arus pada R3 (I3) dalam satuan Ampere (A).</li>
+              <li>Bandingkan hasil ini dengan rumus Mesh Analysis yang ada di layar.</li>
+            </ul>
+            <div style="background: #eef2f5; padding: 10px; border-left: 4px solid #00BCD4; border-radius: 4px; font-size: 0.9em; margin-top: 10px;">
+              <strong>Catatan:</strong> Arus I3 adalah gabungan dari arus yang dihasilkan oleh Loop 1 (dari baterai V1) dikurangi pengaruh dari Loop 2 (dari baterai V2) karena polaritas pasangannya.
+            </div>
+          </div>
+        </div>
+
+        <div class="tutorial-card offline-card">
+          <div class="tutorial-card-header">
+            <h3><i class="fas fa-tools"></i> Eksperimen Offline</h3>
+          </div>
+          <div class="tutorial-card-body">
+            <p class="tutorial-objective"><strong>Tujuan Percobaan:</strong> Pratikan dapat membuktikan Hukum Kirchhoff I dan II secara empiris dengan merangkai komponen fisik dua loop, serta menganalisis interaksi arus antar sumber tegangan menggunakan alat ukur.</p>
+            
+            <h4>Tahap 1: Merakit Sirkuit (Persiapan)</h4>
+            <ul>
+                <li>Saat pertama kali membuka simulator (kit praktikum), Anda akan melihat sirkuit terputus dan tidak lengkap.</li>
+              <li>Perhatikan panel "Komponen Elektronika" di sebelah sudut kanan bawah.</li>
+              <li>Lengkapi rangkaian dengan tiga buah resistor.</li>
+              <li>Nyalakan kedua saklar power supply. Jika peletakan komponen benar, maka tampilan nilai arus akan muncul di layar.</li>
+            </ul>
+
+            <h4>Tahap 2: Menghitung Arus (Eksperimen Utama)</h4>
+            <p>Rangkaian fisik ini memodelkan metode Mesh Analysis (Analisis Loop) untuk mengukur arus nyata yang mengalir di cabang tengah (I3).</p>
+            <ul>
+              <li>Putar knop pada catu daya (power supply) untuk menvariasikan tegangan input (V1 dan V2).</li>
+              <li>Perhatikan nilai arus aktual yang ditampilkan pada layar.</li>
+            </ul>
+
+            <h4>Tahap 3: Analisis Hasil & Observasi</h4>
+            <ul>
+              <li>Cobalah untuk menvariasikan nilai resistor dan tegangan yang digunakan pada kedua sisi loop.</li>
+              <li>Catat hasil ukur, lalu bandingkan hasil empiris ini dengan perhitungan teoritis menggunakan rumus Mesh Analysis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
