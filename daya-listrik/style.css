@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +10,14 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #333;
   display: flex;
-  justify-content: center;
+  flex-direction: column; 
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;
+  gap: 40px; 
 }
 
-/* Main Container */
+
 .main-container {
   width: 1100px;
   height: 1000px;
@@ -28,7 +29,7 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+
 .header {
   background: linear-gradient(90deg, #1a2a3a, #2c3e50);
   color: white;
@@ -88,13 +89,13 @@ body {
   color: #07d400;
 }
 
-/* Content Layout */
+
 .content-wrapper {
   display: flex;
   min-height: 700px;
 }
 
-/* Side Panels */
+
 .side-panel {
   width: 280px;
   padding: 25px;
@@ -140,7 +141,6 @@ body {
   overflow-y: auto;
 }
 
-/* Instruction Text */
 .instruction-text {
   margin-bottom: 20px;
   line-height: 1.6;
@@ -169,9 +169,7 @@ body {
   font-weight: bold;
 }
 
-/
 
-/* Formula Section */
 .formula-section {
   margin-top: 30px;
 }
@@ -212,7 +210,7 @@ body {
   color: #666;
 }
 
-/* Center Panel */
+
 .center-panel {
   flex: 1;
   padding: 25px;
@@ -275,7 +273,7 @@ body {
   100% { opacity: 1; }
 }
 
-/* Circuit Board */
+
 .circuit-board {
   position: relative;
   background: white;
@@ -298,7 +296,7 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-/* Drop Zones */
+
 .drop-zone {
   position: absolute;
   width: 100px;
@@ -334,18 +332,18 @@ body {
 .rotated-led svg {
   transform: rotate(90deg) !important;
 }
-/* Tambahkan di bagian CSS Anda */
+
 @keyframes blink {
   0% { opacity: 0.3; }
   100% { opacity: 1; }
 }
 
-/* Pastikan LED yang diputar memiliki transform yang benar */
+
 .rotated-led svg {
   transform: rotate(90deg) !important;
   transform-origin: center;
 }
-/* Circuit Controls */
+
 .circuit-controls {
   margin-top: 10px;
 }
@@ -452,12 +450,12 @@ body {
   margin: 0;
 }
 
-/* Hapus tombol panah untuk Firefox */
+
 .input-with-controls input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* Simulate Button */
+
 .simulate-btn {
   width: 100%;
   padding: 18px;
@@ -486,7 +484,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* Real-time Display */
 .real-time-display {
   display: flex;
   justify-content: space-between;
@@ -528,7 +525,6 @@ body {
   font-weight: 500;
 }
 
-/* Component Shelf */
 .component-instruction {
   margin-bottom: 25px;
   color: #666;
@@ -601,7 +597,7 @@ body {
   cursor: grabbing;
 }
 
-/* Hint Box */
+
 .hint-box {
   margin-top: 30px;
   background: #fff8e1;
@@ -625,7 +621,6 @@ body {
   line-height: 1.5;
 }
 
-/* Footer */
 .footer {
   background: #2c3e50;
   color: #ecf0f1;
@@ -684,7 +679,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .content-wrapper {
     flex-direction: column;
@@ -740,4 +734,116 @@ body {
     max-width: 100%;
     border-radius: 0;
   }
+}
+
+.tutorial-container {
+  width: 1100px;
+  max-width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tutorial-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.tutorial-header h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.tutorial-header p {
+  color: #bdc3c7;
+  font-size: 1.1rem;
+}
+
+
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px;
+}
+
+.tutorial-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.online-card .tutorial-card-header {
+  background: linear-gradient(90deg, #00BCD4, #0097A7);
+}
+
+.offline-card .tutorial-card-header {
+  background: linear-gradient(90deg, #4CAF50, #2E7D32);
+}
+
+.tutorial-card-header {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.tutorial-card-header h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tutorial-card-body {
+  padding: 30px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.tutorial-objective {
+  background: #f8f9fa;
+  padding: 15px;
+  border-left: 4px solid #ff9800;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.tutorial-card-body h4 {
+  color: #2c3e50;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.tutorial-card-body ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.tutorial-card-body li {
+  margin-bottom: 8px;
+}
+
+.sub-list {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 10px !important;
+}
+
+.sub-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
