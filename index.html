@@ -1,17 +1,243 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Elektronika Dasar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Simulasi - Elektronika Dasar</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      /* Background gradient disamakan dengan simulator */
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    /* HEADER SECTION */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    .logo-icon {
+      font-size: 3rem;
+      color: #00BCD4;
+      filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.5));
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    header h1 .highlight {
+      color: #00BCD4;
+    }
+
+    header p {
+      color: #bdc3c7;
+      font-size: 1.1rem;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* GRID UNTUK MENU SIMULATOR */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1100px;
+      margin-bottom: 50px;
+    }
+
+    /* DESAIN KARTU (CARD) */
+    .sim-card {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 30px;
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Garis dekorasi di atas kartu */
+    .sim-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: #00BCD4;
+      transition: height 0.3s ease;
+    }
+
+    /* Efek saat mouse mengarah ke kartu */
+    .sim-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 188, 212, 0.3);
+    }
+
+    .sim-card:hover::before {
+      height: 100%;
+      opacity: 0.05;
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+      background: #e0f7fa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #00BCD4;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .sim-card:hover .card-icon {
+      transform: scale(1.1);
+      background: #00BCD4;
+      color: white;
+    }
+
+    .card-content h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .card-content p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      flex-grow: 1; /* Membuat tombol di bawah rata */
+    }
+
+    .btn-masuk {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #00BCD4;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+
+    .sim-card:hover .btn-masuk {
+      background: #0097A7;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    /* RESPONSIVE UNTUK HP */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .logo-icon {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Elektronika Dasar</h1>
 
-  <ul>
-    <li><a href="/hukum-ohm/">Simulasi Hukum Ohm</a></li>
-    <li><a href="/hukum-kirchhoff/">Simulasi Hukum Kirchhoff</a></li>
-    <li><a href="/daya-listrik/">Simulasi Daya Listrik</a></li>
-  </ul>
+  <header>
+    <div class="logo-container">
+      <i class="fas fa-bolt logo-icon"></i>
+      <h1>Elektronika <span class="highlight">Dasar</span></h1>
+    </div>
+    <p>Platform Laboratorium Virtual & Panduan Eksperimen Rangkaian Listrik Interaktif.</p>
+  </header>
+
+  <main class="grid-container">
+    
+    <a href="/hukum-ohm/" class="sim-card">
+      <div class="card-icon"><i class="fas fa-microchip"></i></div>
+      <div class="card-content">
+        <h2>Hukum Ohm</h2>
+        <p>Pelajari hubungan fundamental antara Tegangan (V), Arus (I), dan Hambatan (R) dalam satu loop sirkuit dasar.</p>
+        <div class="btn-masuk">Buka Simulasi <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <a href="/hukum-kirchhoff/" class="sim-card">
+      <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+      <div class="card-content">
+        <h2>Hukum Kirchhoff</h2>
+        <p>Eksperimen metode Mesh Analysis pada sirkuit dua loop kompleks dengan sumber tegangan ganda.</p>
+        <div class="btn-masuk">Buka Simulasi <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+    <a href="/daya-listrik/" class="sim-card">
+      <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+      <div class="card-content">
+        <h2>Daya Listrik</h2>
+        <p>Hitung konsumsi energi (Watt) secara real-time dan amati batas aman arus listrik agar komponen tidak terbakar.</p>
+        <div class="btn-masuk">Buka Simulasi <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </a>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Elektronika Dasar Online. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
