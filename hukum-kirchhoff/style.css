@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +17,6 @@ body {
   gap: 40px; 
 }
 
-/* Main Container */
 .main-container {
   width: 1100px;
   height: 1100px;
@@ -29,7 +28,7 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+
 .header {
   background: linear-gradient(90deg, #1a2a3a, #2c3e50);
   color: white;
@@ -69,13 +68,13 @@ body {
   margin-left: 10px;
 }
 
-/* Content Layout */
+
 .content-wrapper {
   display: flex;
   min-height: 700px;
 }
 
-/* Side Panels */
+
 .side-panel {
   width: 280px;
   padding: 25px;
@@ -121,7 +120,7 @@ body {
   overflow-y: auto;
 }
 
-/* Instruction Text */
+
 .instruction-text {
   margin-bottom: 20px;
   line-height: 1.6;
@@ -142,7 +141,6 @@ body {
   font-size: rem;
 }
 
-/* Formula Section */
 .formula-section {
   margin-bottom: 30px;
 }
@@ -184,7 +182,7 @@ body {
   line-height: 1.4;
 }
 
-/* Circuit Status */
+
 .circuit-status {
   background: #f8f9fa;
   padding: 20px;
@@ -244,7 +242,7 @@ body {
   color: #d32f2f;
 }
 
-/* Result Display */
+
 .result-display {
   background: linear-gradient(135deg, #fff3e0, #ffecb3);
   padding: 20px;
@@ -300,7 +298,7 @@ body {
   font-weight: 500;
 }
 
-/* Center Panel */
+
 .center-panel {
   flex: 1;
   padding: 25px;
@@ -368,7 +366,7 @@ body {
   }
 }
 
-/* Circuit Board */
+
 .circuit-board {
   position: relative;
   background: white;
@@ -407,7 +405,7 @@ body {
   display: none;
 }
 
-/* Drop Zones */
+
 .drop-zone {
   position: absolute;
   width: 100px;
@@ -466,7 +464,7 @@ body {
   display: none;
 }
 
-/* Circuit Controls */
+
 .circuit-controls {
   margin-top: 10px;
 }
@@ -528,7 +526,7 @@ body {
   justify-content: center;
   }
 
-/* Hapus tombol panah pada input number */
+
 .input-with-controls input {
   width: 200px;
   padding: 15px;
@@ -550,7 +548,7 @@ body {
   margin: 0;
 }
 
-/* Hapus tombol panah untuk Firefox */
+
 .input-with-controls input[type="number"] {
   -moz-appearance: textfield;
 }
@@ -563,7 +561,7 @@ body {
 
 
 
-/* Simulate Button */
+
 .simulate-btn {
   width: 100%;
   padding: 18px;
@@ -592,13 +590,12 @@ body {
   transform: translateY(-1px);
 }
 
-/* Efek tombol saat diklik */
 .simulate-btn.clicked {
   transform: scale(0.98);
   box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
 }
 
-/* Component Shelf */
+
 .component-instruction {
   margin-bottom: 25px;
   color: #666;
@@ -669,7 +666,7 @@ body {
   cursor: grabbing;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
   .content-wrapper {
     flex-direction: column;
@@ -754,10 +751,10 @@ body {
   font-size: 1.1rem;
 }
 
-/* Menggunakan CSS Grid untuk 2 Kolom */
+
 .tutorial-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Membagi tepat 50% dan 50% */
+  grid-template-columns: 1fr 1fr; 
   gap: 30px;
 }
 
@@ -770,7 +767,6 @@ body {
   flex-direction: column;
 }
 
-/* Perbedaan warna header agar praktikan mudah membedakan */
 .online-card .tutorial-card-header {
   background: linear-gradient(90deg, #ff5722, #e64a19);
 }
